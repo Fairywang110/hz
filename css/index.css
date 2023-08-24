@@ -3,13 +3,15 @@ body{
     height:1080px;
     display: flex;
     overflow: hidden;
-	background-color:#ddd8ab;
+    margin: 0;
+    padding: 0;
+}
+.bg{
 	align-items: center;
 	justify-content: center;
-	background-image: url("../img/bgy1.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	background:opacity(0.5);
+	opacity(0.5);
 }
 img{
 	max-width:100%;/*自适应*/
@@ -17,14 +19,14 @@ img{
 	width:auto;
 	position:fixed;
 }
-.Title{
+#Title{
 	width:20%;
 	height:95%;
 	position:absolute;
 	left:10%;
 	top:2%;
 }
-.Yniao{
+#Yniao{
 	width:23%;
 	height:40%;
 	position:absolute;
@@ -35,6 +37,7 @@ img{
 	box-shadow: 0 0 25px #fff inset,0 0 25px #fff;
 	border-radius: 55%;
 	animation:bei 5s linear 1 ;
+	animation:rotate 5s linear infinite;
 }
 @keyframes bei{
             	0%{opacity:0}
@@ -42,18 +45,26 @@ img{
 		      	75%{opacity:0.3}
 		      	100%{opacity:1;}
 }
-.Yniao:hover
+@keyframes rotate{
+	from{
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+#Yniao:hover
 {
 transform: scale(1.05);
 }
-.Biaos{
+#Biaos{
 	width:11%;
 	height:20%;
 	position:absolute;
 	left:17%;
 	bottom:15%;
 }
-.Build{
+#Build{
 	width:20%;
 	height:30%;
 	position:absolute;
@@ -100,6 +111,35 @@ transform: scale(1.05);
 	}
 	100%{
 	width:5%;
+	height:4%;
+	}
+}
+#come{
+	width:65%;
+	height:80%;
+	position:absolute;
+	top:10%;
+	left:17%;
+}
+#XX{
+	width:2%;
+	height:3%;
+	position:absolute;
+	bottom: 33%;
+	left:61.8%;
+	animation:rip 1.5s linear infinite;/*放大缩小*/
+}
+@keyframes rip{
+	0%{
+	width:2%;
+	height:4%;
+	}
+	50%{
+	width:3%;
+	height:5%;
+	}
+	100%{
+	width:2%;
 	height:4%;
 	}
 }
